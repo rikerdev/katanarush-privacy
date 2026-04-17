@@ -87,6 +87,15 @@
 <h2>In-App Purchases</h2>
 <p>The Application offers optional in-app purchases processed through Google Play Billing. The Service Provider receives only anonymized transaction metadata (product ID, purchase token). Payment information (card details, billing address) is handled entirely by Google and is never accessible to the Service Provider.</p>
 
+<h2>Firebase (Google)</h2>
+<p>The Application uses Firebase services provided by Google to monitor stability, understand aggregate usage, and deliver remote configuration:</p>
+<ul>
+    <li><strong>Firebase Analytics</strong> — collects anonymized app event data (gameplay actions, screen views, session duration), device characteristics (model, OS version, language), and a pseudonymous Firebase Installation ID. This data is used to understand aggregate usage patterns and improve the game. It is not linked to your identity.</li>
+    <li><strong>Firebase Crashlytics</strong> — collects crash reports, stack traces, device state, and app version at the moment of a crash. This data helps diagnose and fix stability issues.</li>
+    <li><strong>Firebase Remote Config</strong> — delivers configuration values to the Application. No user data is sent outbound through this service.</li>
+</ul>
+<p>Firebase does not collect your name, email, precise location, or other directly identifying information through this Application. You can review Google's data handling practices at <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+
 <h2>Google Play Games Services and Cloud Save</h2>
 <p>If you sign in with Google Play Games, the Application accesses your public Google Play Games profile (player ID, display name, avatar) to enable leaderboards and achievements. Your game progress may be stored in the private "AppData" folder of your personal Google Drive through Google Play Games Saved Games. This data is owned and controlled by Google and is accessible only to you and this Application. The Service Provider does not operate its own backend or store your save data on its own servers.</p>
 
@@ -99,6 +108,7 @@
     <li><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Unity Technologies</a></li>
     <li><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Unity Ads</a></li>
     <li><a href="https://developers.is.com/ironsource-mobile/air/ironsource-mobile-privacy-policy/" target="_blank" rel="noopener">ironSource / LevelPlay</a></li>
+    <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase (Analytics, Crashlytics, Remote Config)</a></li>
 </ul>
 
 <p>The Service Provider may disclose User Provided and Automatically Collected Information:</p>
@@ -138,7 +148,7 @@
 <h2>Changes to this Privacy Policy</h2>
 <p>This Privacy Policy may be updated from time to time. The Service Provider will notify you of any changes by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes. Continued use of the Application after changes are posted is deemed approval of all changes.</p>
 
-<p class="effective-date">This privacy policy is effective as of <strong>2026-04-14</strong>.</p>
+<p class="effective-date">This privacy policy is effective as of <strong>2026-04-17</strong>.</p>
 
 <h2>Consent</h2>
 <p>By using the Application, you consent to the processing of your information as set forth in this Privacy Policy.</p>
