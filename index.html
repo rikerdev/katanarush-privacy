@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Katana Rush</title>
+    <title>Политика конфиденциальности — Katana Rush</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -53,108 +53,190 @@
             border-radius: 6px;
             border-left: 4px solid #0969da;
         }
+        .lang-nav {
+            text-align: right;
+            margin-bottom: 16px;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
 
-<h1>Privacy Policy</h1>
+<div class="lang-nav">
+    <a href="#ru">Русский</a> · <a href="#en">English</a>
+</div>
 
-<p>This privacy policy is applicable to the Katana Rush app (hereinafter referred to as "Application") for mobile devices, which was developed by Rikerdev (hereinafter referred to as "Service Provider") as an Ad Supported service with optional in-app purchases. This service is provided "AS IS".</p>
+<h1 id="ru">Политика конфиденциальности</h1>
 
-<h2>What information does the Application obtain and how is it used?</h2>
-<p>The Application does not require you to create an account or provide personal information directly. Sign-in with Google Play Games is optional and used only to enable leaderboards, achievements, and cloud save.</p>
+<p>Настоящая политика конфиденциальности распространяется на игру <strong>Katana Rush</strong> (далее — «Игра»), разработанную компанией <strong>Rikerdev</strong> (далее — «Разработчик») и размещённую на платформе Яндекс Игры (<a href="https://yandex.ru/games" target="_blank" rel="noopener">yandex.ru/games</a>). Игра предоставляется «как есть» (AS IS) и поддерживается рекламой с возможностью внутриигровых покупок.</p>
 
-<h2>What information does the Application collect automatically?</h2>
-<p>The Application may collect the following information automatically:</p>
+<h2>Какие данные собирает Игра</h2>
+<p>Игра не требует создания отдельного аккаунта и не запрашивает персональные данные напрямую. Авторизация через Яндекс ID опциональна и нужна только для таблицы лидеров, достижений и облачных сохранений.</p>
+
+<h2>Какие данные собираются автоматически</h2>
+<p>Через Яндекс Метрику и Яндекс Игры SDK могут собираться следующие данные:</p>
 <ul>
-    <li>Type of mobile device, model and manufacturer</li>
-    <li>Mobile device's unique identifiers (including Android Advertising ID / AAID)</li>
-    <li>IP address and approximate location derived from it (country/region level)</li>
-    <li>Mobile operating system and version</li>
-    <li>Information about how you use the Application (session length, level progress, in-game events, crash reports, performance metrics)</li>
-    <li>Purchase history metadata (which items you bought — payment details are processed by Google and never received by the Service Provider)</li>
+    <li>Тип устройства, операционная система, браузер и их версии</li>
+    <li>IP-адрес и приблизительная геолокация (на уровне страны / региона)</li>
+    <li>Анонимный идентификатор посетителя Метрики</li>
+    <li>Длительность сессии, глубина просмотра, события внутри Игры (начало забега, завершение забега, показ рекламы, прогресс по достижениям)</li>
+    <li>Метаданные покупок (идентификатор товара, токен покупки) — обрабатываются Яндекс Платежами; реквизиты карты Разработчику не передаются</li>
 </ul>
 
-<h2>Does the Application collect precise real time location information of the device?</h2>
-<p>No. This Application does not gather precise (GPS) location. Only coarse region-level location derived from IP address by advertising partners.</p>
+<h2>Собирает ли Игра точные геоданные</h2>
+<p>Нет. Точная геолокация (GPS) не используется. Только приблизительный регион по IP-адресу, как это делают большинство веб-сервисов.</p>
 
-<h2>Does the Application use Artificial Intelligence (AI) technologies?</h2>
-<p>No. The Application does not use AI technologies to process your data or provide features.</p>
+<h2>Используются ли технологии ИИ</h2>
+<p>Нет. Игра не применяет ИИ для обработки ваших данных или предоставления функций.</p>
+
+<h2>Реклама</h2>
+<p>Игра показывает полноэкранную и rewarded-рекламу через рекламную сеть Яндекс Игр (встроенные методы SDK <code>adv.showFullscreenAdv</code> и <code>adv.showRewardedVideo</code>). Рекламные сети, интегрированные Яндексом, могут использовать IP-адрес, информацию об устройстве и истории взаимодействия с рекламой для показа релевантных объявлений. Вы можете управлять рекламными настройками в своём аккаунте Яндекса: <a href="https://yandex.ru/support/browser/personal-data-protection/ad-block.html" target="_blank" rel="noopener">yandex.ru — настройки рекламы</a>.</p>
+
+<h2>Внутриигровые покупки</h2>
+<p>Игра предлагает покупки за внутреннюю валюту Яндекса (YAN) через Яндекс Платежи (метод SDK <code>payments.purchase</code>). Разработчик получает только обезличенные данные транзакции (productID, purchaseToken). Платёжная информация обрабатывается исключительно Яндексом и Разработчику недоступна.</p>
+
+<h2>Авторизация и облачное сохранение</h2>
+<p>При входе через Яндекс ID Игра получает доступ к публичному профилю (уникальный идентификатор игрока, отображаемое имя, аватар) — это необходимо для отображения в таблице лидеров и сохранения прогресса. Прогресс и настройки сохраняются на серверах Яндекса через метод <code>ysdk.player.setData</code> в объёме до 200 КБ на игрока. Разработчик не поднимает собственный бэкенд и не хранит ваши данные на своих серверах.</p>
+
+<h2>Третьи стороны</h2>
+<p>Игра использует только сервисы Яндекса. Политика конфиденциальности Яндекса покрывает обработку данных во всех перечисленных сервисах:</p>
+<ul>
+    <li><a href="https://yandex.ru/legal/confidential" target="_blank" rel="noopener">Политика конфиденциальности Яндекса</a></li>
+    <li><a href="https://yandex.ru/legal/games_termsofuse" target="_blank" rel="noopener">Пользовательское соглашение Яндекс Игр</a></li>
+    <li><a href="https://yandex.ru/legal/metrica_termsofuse" target="_blank" rel="noopener">Условия использования Яндекс Метрики</a></li>
+</ul>
+
+<p>Разработчик может раскрыть собранные данные в следующих случаях:</p>
+<ul>
+    <li>По требованию закона (повестка, иной законный запрос);</li>
+    <li>Если есть основания полагать, что раскрытие необходимо для защиты прав, безопасности пользователей или расследования мошенничества;</li>
+    <li>Доверенным подрядчикам, работающим от имени Разработчика и связанным обязательствами конфиденциальности.</li>
+</ul>
+
+<h2>Как отказаться от сбора данных</h2>
+<ul>
+    <li><strong>Прекратить сбор данных:</strong> прекратите пользоваться Игрой и очистите данные сайта Яндекс Игр в вашем браузере.</li>
+    <li><strong>Отключить персонализированную рекламу:</strong> в настройках вашего аккаунта Яндекс в разделе управления рекламой.</li>
+    <li><strong>Отключить авторизацию:</strong> выйдите из аккаунта Яндекс — таблица лидеров и облачные сохранения перестанут синхронизироваться.</li>
+</ul>
+
+<h2>Ваши права (GDPR / CCPA)</h2>
+<p>Если вы резидент Европейской экономической зоны (EEA), Великобритании или штата Калифорния, вы имеете право:</p>
+<ul>
+    <li>Запросить доступ к собранным персональным данным</li>
+    <li>Потребовать исправления или удаления данных</li>
+    <li>Ограничить или возразить против обработки</li>
+    <li>Перенести данные</li>
+    <li>Подать жалобу в надзорный орган</li>
+</ul>
+<p>Для реализации этих прав напишите Разработчику на <strong>riker.dev.of@gmail.com</strong>. Запрос будет обработан в разумные сроки.</p>
+
+<h2>Срок хранения данных</h2>
+<p>Разработчик не оперирует собственной серверной инфраструктурой и не хранит персональные данные самостоятельно. Данные, собранные сервисами Яндекса (реклама, аналитика, облачное сохранение), хранятся согласно политике Яндекса, обычно до 24 месяцев, после чего могут быть агрегированы. Игровой прогресс хранится в вашем аккаунте Яндекс до его удаления.</p>
+
+<h2>Дети</h2>
+<p>Игра не предназначена для детей младше 13 лет. Разработчик сознательно не собирает персональные данные детей. Если вы родитель или опекун и обнаружили, что ваш ребёнок предоставил персональные данные, напишите на <strong>riker.dev.of@gmail.com</strong> — данные будут удалены.</p>
+
+<h2>Безопасность</h2>
+<p>Разработчик заботится о конфиденциальности данных. Применяются организационные и технические меры защиты. Доступ к данным ограничен. Однако ни одна система безопасности не может гарантировать полной защиты от утечек.</p>
+
+<h2>Изменения политики</h2>
+<p>Политика может обновляться. О существенных изменениях будет сообщено путём обновления этой страницы. Продолжение использования Игры после публикации изменений означает согласие с обновлённой политикой.</p>
+
+<p class="effective-date">Настоящая политика вступает в силу с <strong>2026-04-18</strong>.</p>
+
+<h2>Согласие</h2>
+<p>Используя Игру, вы соглашаетесь с обработкой ваших данных в соответствии с настоящей политикой.</p>
+
+<h2>Контакты</h2>
+<p>По вопросам конфиденциальности: <strong>riker.dev.of@gmail.com</strong>.</p>
+
+<hr>
+
+<h1 id="en">Privacy Policy</h1>
+
+<p>This privacy policy applies to the game <strong>Katana Rush</strong> (hereinafter "Game") developed by <strong>Rikerdev</strong> (hereinafter "Developer") and hosted on the Yandex Games platform (<a href="https://yandex.com/games" target="_blank" rel="noopener">yandex.com/games</a>). The Game is provided "AS IS" as an ad-supported service with optional in-app purchases.</p>
+
+<h2>What data does the Game collect</h2>
+<p>The Game does not require a separate account and does not request personal information directly. Sign-in via Yandex ID is optional and used only for leaderboards, achievements, and cloud save.</p>
+
+<h2>What data is collected automatically</h2>
+<p>Yandex Metrica and the Yandex Games SDK may collect the following:</p>
+<ul>
+    <li>Device type, operating system, browser and their versions</li>
+    <li>IP address and approximate geolocation (country / region level)</li>
+    <li>Anonymous Metrica visitor identifier</li>
+    <li>Session duration, page depth, in-game events (run start, run end, ad shown, achievement progress)</li>
+    <li>Purchase metadata (product ID, purchase token) — handled by Yandex Payments; card details are never sent to the Developer</li>
+</ul>
+
+<h2>Does the Game collect precise location</h2>
+<p>No. No GPS data is used. Only approximate region by IP, same as most web services.</p>
+
+<h2>Does the Game use AI technologies</h2>
+<p>No. The Game does not use AI to process your data or provide features.</p>
 
 <h2>Advertising</h2>
-<p>The Application displays advertisements provided by third-party ad networks through Unity LevelPlay (ironSource) mediation, including Unity Ads. These networks may use the Android Advertising ID (AAID), IP address, and ad interaction data to deliver personalized or contextual advertising and to measure ad performance. You can reset your Advertising ID or opt out of personalized ads at any time in your device settings (Settings → Google → Ads).</p>
+<p>The Game shows fullscreen and rewarded advertising via the Yandex Games ad network (built-in SDK methods <code>adv.showFullscreenAdv</code> and <code>adv.showRewardedVideo</code>). Ad networks integrated by Yandex may use IP address, device info, and ad interaction history to serve relevant ads. You can manage advertising preferences in your Yandex account settings.</p>
 
 <h2>In-App Purchases</h2>
-<p>The Application offers optional in-app purchases processed through Google Play Billing. The Service Provider receives only anonymized transaction metadata (product ID, purchase token). Payment information (card details, billing address) is handled entirely by Google and is never accessible to the Service Provider.</p>
+<p>The Game offers purchases for Yandex in-game currency (YAN) via Yandex Payments (SDK method <code>payments.purchase</code>). The Developer receives only anonymized transaction data (productID, purchaseToken). Payment information is processed entirely by Yandex and is never accessible to the Developer.</p>
 
-<h2>Firebase (Google)</h2>
-<p>The Application uses Firebase services provided by Google to monitor stability, understand aggregate usage, and deliver remote configuration:</p>
+<h2>Authorization and Cloud Save</h2>
+<p>When you sign in via Yandex ID, the Game accesses your public profile (unique player identifier, display name, avatar) for leaderboard ranking and save persistence. Progress and settings are stored on Yandex servers via <code>ysdk.player.setData</code>, up to 200 KB per player. The Developer does not operate its own backend and does not store your data on its own servers.</p>
+
+<h2>Third parties</h2>
+<p>The Game uses only Yandex services. Yandex's privacy policy covers data processing across all listed services:</p>
 <ul>
-    <li><strong>Firebase Analytics</strong> — collects anonymized app event data (gameplay actions, screen views, session duration), device characteristics (model, OS version, language), and a pseudonymous Firebase Installation ID. This data is used to understand aggregate usage patterns and improve the game. It is not linked to your identity.</li>
-    <li><strong>Firebase Crashlytics</strong> — collects crash reports, stack traces, device state, and app version at the moment of a crash. This data helps diagnose and fix stability issues.</li>
-    <li><strong>Firebase Remote Config</strong> — delivers configuration values to the Application. No user data is sent outbound through this service.</li>
-</ul>
-<p>Firebase does not collect your name, email, precise location, or other directly identifying information through this Application. You can review Google's data handling practices at <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
-
-<h2>Google Play Games Services and Cloud Save</h2>
-<p>If you sign in with Google Play Games, the Application accesses your public Google Play Games profile (player ID, display name, avatar) to enable leaderboards and achievements. Your game progress may be stored in the private "AppData" folder of your personal Google Drive through Google Play Games Saved Games. This data is owned and controlled by Google and is accessible only to you and this Application. The Service Provider does not operate its own backend or store your save data on its own servers.</p>
-
-<h2>Do third parties see and/or have access to information obtained by the Application?</h2>
-<p>The Application utilizes third-party services that have their own Privacy Policies. Below are the links to the Privacy Policies of the third-party service providers used by the Application:</p>
-<ul>
-    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Services</a></li>
-    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Games Services</a></li>
-    <li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google AdMob / Ads</a></li>
-    <li><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Unity Technologies</a></li>
-    <li><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Unity Ads</a></li>
-    <li><a href="https://developers.is.com/ironsource-mobile/air/ironsource-mobile-privacy-policy/" target="_blank" rel="noopener">ironSource / LevelPlay</a></li>
-    <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase (Analytics, Crashlytics, Remote Config)</a></li>
+    <li><a href="https://yandex.com/legal/confidential" target="_blank" rel="noopener">Yandex Privacy Policy</a></li>
+    <li><a href="https://yandex.com/legal/games_termsofuse" target="_blank" rel="noopener">Yandex Games Terms of Use</a></li>
+    <li><a href="https://yandex.com/legal/metrica_termsofuse" target="_blank" rel="noopener">Yandex Metrica Terms</a></li>
 </ul>
 
-<p>The Service Provider may disclose User Provided and Automatically Collected Information:</p>
+<p>The Developer may disclose collected data:</p>
 <ul>
-    <li>as required by law, such as to comply with a subpoena or similar legal process;</li>
-    <li>when they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;</li>
-    <li>with trusted service providers who work on their behalf, do not have independent use of the information disclosed to them, and have agreed to adhere to the rules set forth in this privacy statement.</li>
+    <li>When required by law (subpoena or similar);</li>
+    <li>When there is good-faith belief that disclosure is necessary to protect rights, user safety, or investigate fraud;</li>
+    <li>With trusted contractors acting on the Developer's behalf under confidentiality obligations.</li>
 </ul>
 
-<h2>What are my opt-out rights?</h2>
+<h2>Opt-out rights</h2>
 <ul>
-    <li><strong>Stop all data collection:</strong> Uninstall the Application using the standard uninstall process of your device.</li>
-    <li><strong>Opt out of personalized advertising:</strong> In your device settings (Settings → Google → Ads), reset your Advertising ID or enable "Opt out of Ads Personalization".</li>
-    <li><strong>Disconnect Google Play Games:</strong> Sign out of Google Play Games in the Google Play Games app to stop leaderboard/achievement syncing.</li>
+    <li><strong>Stop all data collection:</strong> stop using the Game and clear Yandex Games site data in your browser.</li>
+    <li><strong>Opt out of personalized ads:</strong> in your Yandex account advertising settings.</li>
+    <li><strong>Disconnect authorization:</strong> sign out of Yandex — leaderboard and cloud save sync will stop.</li>
 </ul>
 
 <h2>Your Rights (GDPR / CCPA)</h2>
 <p>If you are a resident of the European Economic Area (EEA), United Kingdom, or California, you have the right to:</p>
 <ul>
-    <li>Request access to the personal data collected about you</li>
-    <li>Request correction or deletion of your personal data</li>
-    <li>Object to or restrict processing of your data</li>
+    <li>Request access to collected personal data</li>
+    <li>Request correction or deletion</li>
+    <li>Object to or restrict processing</li>
     <li>Request data portability</li>
-    <li>Lodge a complaint with your local data protection authority</li>
+    <li>Lodge a complaint with a supervisory authority</li>
 </ul>
-<p>To exercise any of these rights, contact the Service Provider at <strong>riker.dev.of@gmail.com</strong>. The Service Provider will respond within a reasonable time frame.</p>
+<p>To exercise any of these rights, contact the Developer at <strong>riker.dev.of@gmail.com</strong>. The Developer will respond within a reasonable time frame.</p>
 
-<h2>Data Retention Policy</h2>
-<p>The Service Provider does not operate its own servers and does not retain personal data independently. Data collected by third-party services (advertising, analytics) is retained according to their respective privacy policies, typically up to 24 months, after which it may be stored in aggregate form. Game progress stored in Google Play Games Saved Games remains in your Google account until you delete it.</p>
+<h2>Data Retention</h2>
+<p>The Developer does not operate its own server infrastructure and does not retain personal data independently. Data collected by Yandex services (ads, analytics, cloud save) is retained per Yandex's own policy, typically up to 24 months, after which it may be aggregated. Game progress stays in your Yandex account until you delete it.</p>
 
 <h2>Children's Privacy</h2>
-<p>The Application is not directed to children under the age of 13. The Service Provider does not knowingly collect personally identifiable information from children under 13. If the Service Provider discovers that a child under 13 has provided personal information, it will be deleted immediately. If you are a parent or guardian and become aware that your child has provided personal information, please contact the Service Provider at <strong>riker.dev.of@gmail.com</strong>.</p>
+<p>The Game is not directed at children under 13. The Developer does not knowingly collect personally identifiable information from children. Parents or guardians who become aware of such collection should contact <strong>riker.dev.of@gmail.com</strong> — the data will be deleted.</p>
 
 <h2>Security</h2>
-<p>The Service Provider is concerned about safeguarding the confidentiality of your information. Physical, electronic, and procedural safeguards are in place to protect information processed and maintained. Access is limited to authorized parties who need the information to operate, develop, or improve the Application. However, no security system can prevent all potential security breaches.</p>
+<p>The Developer cares about data confidentiality. Organizational and technical safeguards are in place. Access to data is restricted. However, no security system can guarantee full protection.</p>
 
-<h2>Changes to this Privacy Policy</h2>
-<p>This Privacy Policy may be updated from time to time. The Service Provider will notify you of any changes by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes. Continued use of the Application after changes are posted is deemed approval of all changes.</p>
+<h2>Changes to this Policy</h2>
+<p>The Policy may be updated. Material changes will be communicated via this page. Continued use of the Game after changes are posted is deemed approval.</p>
 
-<p class="effective-date">This privacy policy is effective as of <strong>2026-04-17</strong>.</p>
+<p class="effective-date">This privacy policy is effective as of <strong>2026-04-18</strong>.</p>
 
 <h2>Consent</h2>
-<p>By using the Application, you consent to the processing of your information as set forth in this Privacy Policy.</p>
+<p>By using the Game, you consent to the processing of your data as set forth in this Policy.</p>
 
 <h2>Contact</h2>
-<p>If you have any questions regarding privacy while using the Application, please contact the Service Provider via email at <strong>riker.dev.of@gmail.com</strong>.</p>
+<p>For privacy questions: <strong>riker.dev.of@gmail.com</strong>.</p>
 
 <hr>
 
